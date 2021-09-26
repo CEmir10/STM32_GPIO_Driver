@@ -1,0 +1,610 @@
+10:26:02 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o src\main.o 
+In file included from ..\src\main.c:42:0:
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:85:0: warning: "GPIOA_PERIPHERAL_CLK_EN" redefined
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:75:0: note: this is the location of the previous definition
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:86:0: warning: "GPIOB_PERIPHERAL_CLK_EN" redefined
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:76:0: note: this is the location of the previous definition
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:87:0: warning: "GPIOC_PERIPHERAL_CLK_EN" redefined
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:77:0: note: this is the location of the previous definition
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:90:0: warning: "I2C1_PCLK_EN" redefined
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR &=~(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:80:0: note: this is the location of the previous definition
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR |=(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:91:0: warning: "I2C2_PCLK_EN" redefined
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR &=~(1<<22))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:81:0: note: this is the location of the previous definition
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR |=(1<<22))
+ 
+..\src\main.c:62:8: error: unknown type name 'GPIO_InitTypeDef'
+ static GPIO_InitTypeDef  GPIO_InitStruct;
+        ^~~~~~~~~~~~~~~~
+..\src\main.c: In function 'main':
+..\src\main.c:92:3: warning: implicit declaration of function 'HAL_Init' [-Wimplicit-function-declaration]
+   HAL_Init();
+   ^~~~~~~~
+..\src\main.c:98:3: warning: implicit declaration of function 'LED1_GPIO_CLK_ENABLE' [-Wimplicit-function-declaration]
+   LED1_GPIO_CLK_ENABLE();
+   ^~~~~~~~~~~~~~~~~~~~
+..\src\main.c:99:3: warning: implicit declaration of function 'LED2_GPIO_CLK_ENABLE' [-Wimplicit-function-declaration]
+   LED2_GPIO_CLK_ENABLE();
+   ^~~~~~~~~~~~~~~~~~~~
+..\src\main.c:100:3: warning: implicit declaration of function 'LED3_GPIO_CLK_ENABLE' [-Wimplicit-function-declaration]
+   LED3_GPIO_CLK_ENABLE();
+   ^~~~~~~~~~~~~~~~~~~~
+..\src\main.c:101:3: warning: implicit declaration of function 'LED4_GPIO_CLK_ENABLE' [-Wimplicit-function-declaration]
+   LED4_GPIO_CLK_ENABLE();
+   ^~~~~~~~~~~~~~~~~~~~
+..\src\main.c:104:18: error: request for member 'Mode' in something not a structure or union
+   GPIO_InitStruct.Mode  = GPIO_MODE_OUTPUT_PP;
+                  ^
+..\src\main.c:104:27: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function)
+   GPIO_InitStruct.Mode  = GPIO_MODE_OUTPUT_PP;
+                           ^~~~~~~~~~~~~~~~~~~
+..\src\main.c:104:27: note: each undeclared identifier is reported only once for each function it appears in
+..\src\main.c:105:18: error: request for member 'Pull' in something not a structure or union
+   GPIO_InitStruct.Pull  = GPIO_PULLUP;
+                  ^
+..\src\main.c:105:27: error: 'GPIO_PULLUP' undeclared (first use in this function)
+   GPIO_InitStruct.Pull  = GPIO_PULLUP;
+                           ^~~~~~~~~~~
+..\src\main.c:106:18: error: request for member 'Speed' in something not a structure or union
+   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+                  ^
+..\src\main.c:106:27: error: 'GPIO_SPEED_FREQ_VERY_HIGH' undeclared (first use in this function)
+   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\main.c:108:18: error: request for member 'Pin' in something not a structure or union
+   GPIO_InitStruct.Pin = LED1_PIN;
+                  ^
+..\src\main.c:108:25: error: 'LED1_PIN' undeclared (first use in this function)
+   GPIO_InitStruct.Pin = LED1_PIN;
+                         ^~~~~~~~
+..\src\main.c:109:3: warning: implicit declaration of function 'HAL_GPIO_Init' [-Wimplicit-function-declaration]
+   HAL_GPIO_Init(LED1_GPIO_PORT, &GPIO_InitStruct);
+   ^~~~~~~~~~~~~
+..\src\main.c:109:17: error: 'LED1_GPIO_PORT' undeclared (first use in this function)
+   HAL_GPIO_Init(LED1_GPIO_PORT, &GPIO_InitStruct);
+                 ^~~~~~~~~~~~~~
+..\src\main.c:111:18: error: request for member 'Pin' in something not a structure or union
+   GPIO_InitStruct.Pin = LED2_PIN;
+                  ^
+..\src\main.c:111:25: error: 'LED2_PIN' undeclared (first use in this function)
+   GPIO_InitStruct.Pin = LED2_PIN;
+                         ^~~~~~~~
+..\src\main.c:112:17: error: 'LED2_GPIO_PORT' undeclared (first use in this function)
+   HAL_GPIO_Init(LED2_GPIO_PORT, &GPIO_InitStruct);
+                 ^~~~~~~~~~~~~~
+..\src\main.c:114:18: error: request for member 'Pin' in something not a structure or union
+   GPIO_InitStruct.Pin = LED3_PIN;
+                  ^
+..\src\main.c:114:25: error: 'LED3_PIN' undeclared (first use in this function)
+   GPIO_InitStruct.Pin = LED3_PIN;
+                         ^~~~~~~~
+..\src\main.c:115:17: error: 'LED3_GPIO_PORT' undeclared (first use in this function)
+   HAL_GPIO_Init(LED3_GPIO_PORT, &GPIO_InitStruct);
+                 ^~~~~~~~~~~~~~
+..\src\main.c:117:18: error: request for member 'Pin' in something not a structure or union
+   GPIO_InitStruct.Pin = LED4_PIN;
+                  ^
+..\src\main.c:117:25: error: 'LED4_PIN' undeclared (first use in this function)
+   GPIO_InitStruct.Pin = LED4_PIN;
+                         ^~~~~~~~
+..\src\main.c:118:17: error: 'LED4_GPIO_PORT' undeclared (first use in this function)
+   HAL_GPIO_Init(LED4_GPIO_PORT, &GPIO_InitStruct);
+                 ^~~~~~~~~~~~~~
+..\src\main.c:124:5: warning: implicit declaration of function 'HAL_GPIO_TogglePin' [-Wimplicit-function-declaration]
+     HAL_GPIO_TogglePin(LED1_GPIO_PORT, LED1_PIN);
+     ^~~~~~~~~~~~~~~~~~
+..\src\main.c:126:5: warning: implicit declaration of function 'HAL_Delay' [-Wimplicit-function-declaration]
+     HAL_Delay(100);
+     ^~~~~~~~~
+..\src\main.c: In function 'SystemClock_Config':
+..\src\main.c:154:3: error: unknown type name 'RCC_ClkInitTypeDef'
+   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+   ^~~~~~~~~~~~~~~~~~
+..\src\main.c:155:3: error: unknown type name 'RCC_OscInitTypeDef'
+   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+   ^~~~~~~~~~~~~~~~~~
+..\src\main.c:158:20: error: request for member 'OscillatorType' in something not a structure or union
+   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+                    ^
+..\src\main.c:158:38: error: 'RCC_OSCILLATORTYPE_MSI' undeclared (first use in this function)
+   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+                                      ^~~~~~~~~~~~~~~~~~~~~~
+..\src\main.c:159:20: error: request for member 'MSIState' in something not a structure or union
+   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+                    ^
+..\src\main.c:159:32: error: 'RCC_MSI_ON' undeclared (first use in this function)
+   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+                                ^~~~~~~~~~
+..\src\main.c:160:20: error: request for member 'MSIClockRange' in something not a structure or union
+   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_5;
+                    ^
+..\src\main.c:160:37: error: 'RCC_MSIRANGE_5' undeclared (first use in this function)
+   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_5;
+                                     ^~~~~~~~~~~~~~
+..\src\main.c:161:20: error: request for member 'MSICalibrationValue' in something not a structure or union
+   RCC_OscInitStruct.MSICalibrationValue=0x00;
+                    ^
+..\src\main.c:162:20: error: request for member 'PLL' in something not a structure or union
+   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+                    ^
+..\src\main.c:162:36: error: 'RCC_PLL_NONE' undeclared (first use in this function)
+   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+                                    ^~~~~~~~~~~~
+..\src\main.c:163:7: warning: implicit declaration of function 'HAL_RCC_OscConfig' [-Wimplicit-function-declaration]
+   if (HAL_RCC_OscConfig(&RCC_OscInitStruct)!= HAL_OK)
+       ^~~~~~~~~~~~~~~~~
+..\src\main.c:163:47: error: 'HAL_OK' undeclared (first use in this function)
+   if (HAL_RCC_OscConfig(&RCC_OscInitStruct)!= HAL_OK)
+                                               ^~~~~~
+..\src\main.c:171:20: error: request for member 'ClockType' in something not a structure or union
+   RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
+                    ^
+..\src\main.c:171:34: error: 'RCC_CLOCKTYPE_SYSCLK' undeclared (first use in this function)
+   RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
+                                  ^~~~~~~~~~~~~~~~~~~~
+..\src\main.c:171:57: error: 'RCC_CLOCKTYPE_HCLK' undeclared (first use in this function)
+   RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
+                                                         ^~~~~~~~~~~~~~~~~~
+..\src\main.c:171:78: error: 'RCC_CLOCKTYPE_PCLK1' undeclared (first use in this function)
+   RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
+                                                                              ^~~~~~~~~~~~~~~~~~~
+..\src\main.c:171:100: error: 'RCC_CLOCKTYPE_PCLK2' undeclared (first use in this function)
+   RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
+                                                                                                    ^~~~~~~~~~~~~~~~~~~
+..\src\main.c:172:20: error: request for member 'SYSCLKSource' in something not a structure or union
+   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+                    ^
+..\src\main.c:172:36: error: 'RCC_SYSCLKSOURCE_MSI' undeclared (first use in this function)
+   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+                                    ^~~~~~~~~~~~~~~~~~~~
+..\src\main.c:173:20: error: request for member 'AHBCLKDivider' in something not a structure or union
+   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+                    ^
+..\src\main.c:173:37: error: 'RCC_SYSCLK_DIV1' undeclared (first use in this function)
+   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+                                     ^~~~~~~~~~~~~~~
+..\src\main.c:174:20: error: request for member 'APB1CLKDivider' in something not a structure or union
+   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+                    ^
+..\src\main.c:174:38: error: 'RCC_HCLK_DIV1' undeclared (first use in this function)
+   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+                                      ^~~~~~~~~~~~~
+..\src\main.c:175:20: error: request for member 'APB2CLKDivider' in something not a structure or union
+   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+                    ^
+..\src\main.c:176:7: warning: implicit declaration of function 'HAL_RCC_ClockConfig' [-Wimplicit-function-declaration]
+   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0)!= HAL_OK)
+       ^~~~~~~~~~~~~~~~~~~
+..\src\main.c:176:47: error: 'FLASH_LATENCY_0' undeclared (first use in this function)
+   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0)!= HAL_OK)
+                                               ^~~~~~~~~~~~~~~
+..\src\main.c:182:3: warning: implicit declaration of function '__HAL_RCC_PWR_CLK_ENABLE' [-Wimplicit-function-declaration]
+   __HAL_RCC_PWR_CLK_ENABLE();
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\main.c:187:3: warning: implicit declaration of function '__HAL_PWR_VOLTAGESCALING_CONFIG' [-Wimplicit-function-declaration]
+   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\main.c:187:35: error: 'PWR_REGULATOR_VOLTAGE_SCALE3' undeclared (first use in this function)
+   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\main.c:190:3: warning: implicit declaration of function '__HAL_RCC_PWR_CLK_DISABLE' [-Wimplicit-function-declaration]
+   __HAL_RCC_PWR_CLK_DISABLE();
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+10:26:55 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o src\main.o 
+In file included from ..\src\main.c:42:0:
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:85:0: warning: "GPIOA_PERIPHERAL_CLK_EN" redefined
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:75:0: note: this is the location of the previous definition
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:86:0: warning: "GPIOB_PERIPHERAL_CLK_EN" redefined
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:76:0: note: this is the location of the previous definition
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:87:0: warning: "GPIOC_PERIPHERAL_CLK_EN" redefined
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:77:0: note: this is the location of the previous definition
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:90:0: warning: "I2C1_PCLK_EN" redefined
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR &=~(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:80:0: note: this is the location of the previous definition
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR |=(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:91:0: warning: "I2C2_PCLK_EN" redefined
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR &=~(1<<22))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:81:0: note: this is the location of the previous definition
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR |=(1<<22))
+ 
+..\src\main.c: In function 'main':
+..\src\main.c:85:2: error: #endif without #if
+ #endif
+  ^~~~~
+..\src\main.c:66:1: error: expected declaration or statement at end of input
+ {
+ ^
+10:27:23 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o src\main.o 
+In file included from ..\src\main.c:42:0:
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:85:0: warning: "GPIOA_PERIPHERAL_CLK_EN" redefined
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:75:0: note: this is the location of the previous definition
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:86:0: warning: "GPIOB_PERIPHERAL_CLK_EN" redefined
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:76:0: note: this is the location of the previous definition
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:87:0: warning: "GPIOC_PERIPHERAL_CLK_EN" redefined
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:77:0: note: this is the location of the previous definition
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:90:0: warning: "I2C1_PCLK_EN" redefined
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR &=~(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:80:0: note: this is the location of the previous definition
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR |=(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:91:0: warning: "I2C2_PCLK_EN" redefined
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR &=~(1<<22))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:81:0: note: this is the location of the previous definition
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR |=(1<<22))
+ 
+..\src\main.c:85:2: error: #endif without #if
+ #endif
+  ^~~~~
+10:27:51 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o src\main.o 
+In file included from ..\src\main.c:42:0:
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:85:0: warning: "GPIOA_PERIPHERAL_CLK_EN" redefined
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:75:0: note: this is the location of the previous definition
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:86:0: warning: "GPIOB_PERIPHERAL_CLK_EN" redefined
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:76:0: note: this is the location of the previous definition
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:87:0: warning: "GPIOC_PERIPHERAL_CLK_EN" redefined
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:77:0: note: this is the location of the previous definition
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:90:0: warning: "I2C1_PCLK_EN" redefined
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR &=~(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:80:0: note: this is the location of the previous definition
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR |=(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:91:0: warning: "I2C2_PCLK_EN" redefined
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR &=~(1<<22))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:81:0: note: this is the location of the previous definition
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR |=(1<<22))
+ 
+arm-atollic-eabi-gcc -o vjezba.elf src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done
+Info: Nothing to build for vjezba
+11:09:04 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+In file included from C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32_gpiox.h:11:0,
+                 from ..\Drivers\Src\stm32_gpiox.c:8:
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:85:0: warning: "GPIOA_PERIPHERAL_CLK_EN" redefined
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:75:0: note: this is the location of the previous definition
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:86:0: warning: "GPIOB_PERIPHERAL_CLK_EN" redefined
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:76:0: note: this is the location of the previous definition
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:87:0: warning: "GPIOC_PERIPHERAL_CLK_EN" redefined
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:77:0: note: this is the location of the previous definition
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:90:0: warning: "I2C1_PCLK_EN" redefined
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR &=~(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:80:0: note: this is the location of the previous definition
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR |=(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:91:0: warning: "I2C2_PCLK_EN" redefined
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR &=~(1<<22))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:81:0: note: this is the location of the previous definition
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR |=(1<<22))
+ 
+arm-atollic-eabi-gcc -o vjezba.elf Drivers\Src\stm32_gpiox.o src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done
+11:22:22 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+In file included from C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32_gpiox.h:11:0,
+                 from ..\Drivers\Src\stm32_gpiox.c:8:
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:85:0: warning: "GPIOA_PERIPHERAL_CLK_EN" redefined
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:75:0: note: this is the location of the previous definition
+ #define GPIOA_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<0))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:86:0: warning: "GPIOB_PERIPHERAL_CLK_EN" redefined
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:76:0: note: this is the location of the previous definition
+ #define GPIOB_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<1))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:87:0: warning: "GPIOC_PERIPHERAL_CLK_EN" redefined
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR &=~(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:77:0: note: this is the location of the previous definition
+ #define GPIOC_PERIPHERAL_CLK_EN      (RCC->IOPENR |=(1<<2))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:90:0: warning: "I2C1_PCLK_EN" redefined
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR &=~(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:80:0: note: this is the location of the previous definition
+ #define I2C1_PCLK_EN                 (RCC->APB1ENR |=(1<<21))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:91:0: warning: "I2C2_PCLK_EN" redefined
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR &=~(1<<22))
+ 
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32Nucleo.h:81:0: note: this is the location of the previous definition
+ #define I2C2_PCLK_EN                 (RCC->APB1ENR |=(1<<22))
+ 
+In file included from ..\Drivers\Src\stm32_gpiox.c:8:0:
+C:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc/stm32_gpiox.h:44:38: error: unknown type name 'IRQPriority'
+ void GPIO_IRQCofig(uint8_t IRQNumber,IRQPriority,uint8_t ENorDi);
+                                      ^~~~~~~~~~~
+12:09:37 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o src\main.o 
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_ReadFromInputPin':
+..\Drivers\Src\stm32_gpiox.c:27:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_ReadFromInputPort':
+..\Drivers\Src\stm32_gpiox.c:30:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-atollic-eabi-gcc -o vjezba.elf Drivers\Src\stm32_gpiox.o src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done
+13:53:05 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_PheripheralClockControl':
+..\Drivers\Src\stm32_gpiox.c:19:20: error: 'GPIOB' undeclared (first use in this function)
+   else if (pGPIOx==GPIOB){
+                    ^~~~~
+..\Drivers\Src\stm32_gpiox.c:19:20: note: each undeclared identifier is reported only once for each function it appears in
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_Init':
+..\Drivers\Src\stm32_gpiox.c:38:2: error: unknown type name 'uin32_t'
+  uin32_t temp=0;
+  ^~~~~~~
+..\Drivers\Src\stm32_gpiox.c:53:54: error: invalid type argument of unary '*' (have 'int')
+   temp=(pGPIOHandle->GPIO_PinConfig.GPIO_PinOPType<<(*pGPIOHandle->GPIO_PinConfig.GPIO_PinNum));
+                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_ReadFromInputPin':
+..\Drivers\Src\stm32_gpiox.c:66:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_ReadFromInputPort':
+..\Drivers\Src\stm32_gpiox.c:69:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+13:53:21 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o src\main.o 
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_PheripheralClockControl':
+..\Drivers\Src\stm32_gpiox.c:19:20: error: 'GPIOB' undeclared (first use in this function)
+   else if (pGPIOx==GPIOB){
+                    ^~~~~
+..\Drivers\Src\stm32_gpiox.c:19:20: note: each undeclared identifier is reported only once for each function it appears in
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_Init':
+..\Drivers\Src\stm32_gpiox.c:38:2: error: unknown type name 'uin32_t'
+  uin32_t temp=0;
+  ^~~~~~~
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_ReadFromInputPin':
+..\Drivers\Src\stm32_gpiox.c:66:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_ReadFromInputPort':
+..\Drivers\Src\stm32_gpiox.c:69:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+17:37:45 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+..\Drivers\Src\stm32_gpiox.c: In function 'GPIO_PheripheralClockControl':
+..\Drivers\Src\stm32_gpiox.c:28:16: error: 'GPIOB' undeclared (first use in this function)
+    if (pGPIOx==GPIOB){
+                ^~~~~
+..\Drivers\Src\stm32_gpiox.c:28:16: note: each undeclared identifier is reported only once for each function it appears in
+17:38:26 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+arm-atollic-eabi-gcc -o vjezba.elf Drivers\Src\stm32_gpiox.o src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done
+17:44:02 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -Wall -specs=nano.specs -o src\main.o 
+arm-atollic-eabi-gcc -o vjezba.elf Drivers\Src\stm32_gpiox.o src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done
+17:44:29 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -Wall -specs=nano.specs -o src\main.o 
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+arm-atollic-eabi-gcc -o vjezba.elf Drivers\Src\stm32_gpiox.o src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done
+18:09:24 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -Wall -specs=nano.specs -o src\main.o 
+..\src\main.c: In function 'main':
+..\src\main.c:79:9: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
+         delay(1000);
+         ^~~~~
+arm-atollic-eabi-gcc -o vjezba.elf Drivers\Src\stm32_gpiox.o src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done
+18:10:38 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -Wall -specs=nano.specs -o src\main.o 
+arm-atollic-eabi-gcc -o vjezba.elf Drivers\Src\stm32_gpiox.o src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done
+18:46:57 **** Incremental Build of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -Wall -specs=nano.specs -o src\main.o 
+arm-atollic-eabi-gcc -o vjezba.elf Drivers\Src\stm32_gpiox.o src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done
+10:28:02 **** Rebuild of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -Wall -specs=nano.specs -o src\main.o 
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+arm-atollic-eabi-gcc -o vjezba.elf Drivers\Src\stm32_gpiox.o src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done

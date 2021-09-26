@@ -1,0 +1,53 @@
+/*
+ * stm32_gpiox.h
+ *
+ *  Created on: Sep 25, 2021
+ *      Author: emirc
+ */
+
+#ifndef INC_STM32_GPIOX_H_
+#define INC_STM32_GPIOX_H_
+
+#include "stm32Nucleo.h"
+
+// This is configuration structure of GPIO pin
+typedef struct{
+	uint8_t GPIO_PinNum;
+	uint8_t GPIO_PinMode;
+	uint8_t GPIO_PinSpeed;
+	uint8_t GPIO_PinPuPdControl;
+	uint8_t GPIO_PinOPType;
+	uint8_t GPIO_PinAltFunMoode;
+
+}GPIO_PinConfig_t;
+
+//lets create handle structure
+
+typedef struct{
+	//pointer to hold the base address of GPIO pheripheral
+	GPIO_RegDef_t *pGPIOx; //this holds the base address of gpio port to wich pin belongs
+	GPIO_PinConfig_t GPIO_PinConfig; //this holds GPIO pin configuration settings
+
+}GPIO_Handle_t;
+
+void GPIO_Init(void);
+void GPIO_DeInit(void);
+
+void GPIO_PheripheralClockControl(void);
+void GPIO_ReadFromInputPin(void);
+void GPIO_ReadFromInputPort(void);
+void GPIO_WriteToOutputPin(void);
+void GPIO_WriteToOutputPort(void);
+void GPIO_ToggleOutputPin(void);
+
+void GPIO_IRQCofig(void);
+void GPIO_IRQHandling(void);
+
+
+
+
+
+
+
+
+#endif /* INC_STM32_GPIOX_H_ */

@@ -1,0 +1,54 @@
+/*
+ * stm32_gpiox.h
+ *
+ *  Created on: Sep 25, 2021
+ *      Author: emirc
+ */
+
+#ifndef INC_STM32_GPIOX_H_
+#define INC_STM32_GPIOX_H_
+
+#include "stm32Nucleo.h"
+
+// This is configuration structure of GPIO pin
+typedef struct{
+	uint8_t GPIO_PinNum;
+	uint8_t GPIO_PinMode;
+	uint8_t GPIO_PinSpeed;
+	uint8_t GPIO_PinPuPdControl;
+	uint8_t GPIO_PinOPType;
+	uint8_t GPIO_PinAltFunMoode;
+
+}GPIO_PinConfig_t;
+
+//lets create handle structure
+
+typedef struct{
+	//pointer to hold the base address of GPIO pheripheral
+	GPIO_RegDef_t *pGPIOx; //this holds the base address of gpio port to wich pin belongs
+	GPIO_PinConfig_t GPIO_PinConfig; //this holds GPIO pin configuration settings
+
+}GPIO_Handle_t;
+
+void GPIO_Init(GPIO_Handle_t *pGPIOHandle); // port and pin
+void GPIO_DeInit(GPIO_RegDef_t *pGPIOx);    //port
+
+void GPIO_PheripheralClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDis );
+
+uint8_t GPIO_ReadFromInputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNum);
+uint16_t GPIO_ReadFromInputPort(GPIO_RegDef_t *pGPIOx);
+void GPIO_WriteToOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNum, uint8_t Value);
+void GPIO_WriteToOutputPort(GPIO_RegDef_t *pGPIOx,uint16_t Value);
+void GPIO_ToggleOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNum);
+
+void GPIO_IRQCofig(uint8_t IRQNumber,uint8_t IRQPriority,uint8_t ENorDi);
+void GPIO_IRQHandling(uint8_t PinNum); //from which pin interrupt is triggered
+
+
+
+
+
+
+
+
+#endif /* INC_STM32_GPIOX_H_ */

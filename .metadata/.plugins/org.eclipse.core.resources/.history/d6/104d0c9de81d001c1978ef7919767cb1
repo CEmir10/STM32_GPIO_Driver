@@ -1,0 +1,13 @@
+/*
+ * stm32_gpiox.h
+ *
+ *  Created on: Sep 25, 2021
+ *      Author: emirc
+ */
+
+#ifndef INC_STM32_GPIOX_H_
+#define INC_STM32_GPIOX_H_
+
+
+
+#endif /* INC_STM32_GPIOX_H_ */

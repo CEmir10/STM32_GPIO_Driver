@@ -1,0 +1,15 @@
+stm32l0xx_hal_rcc_ex.c:152:6:HAL_RCC_DeInit	16	static
+stm32l0xx_hal_rcc_ex.c:199:19:HAL_RCCEx_PeriphCLKConfig	24	static
+stm32l0xx_hal_rcc_ex.c:364:6:HAL_RCCEx_GetPeriphCLKConfig	16	static
+stm32l0xx_hal_rcc_ex.c:449:10:HAL_RCCEx_GetPeriphCLKFreq	40	static
+stm32l0xx_hal_rcc_ex.c:795:6:HAL_RCCEx_EnableLSECSS	8	static
+stm32l0xx_hal_rcc_ex.c:804:6:HAL_RCCEx_DisableLSECSS	8	static
+stm32l0xx_hal_rcc_ex.c:818:6:HAL_RCCEx_EnableLSECSS_IT	8	static
+stm32l0xx_hal_rcc_ex.c:835:6:HAL_RCCEx_LSECSS_IRQHandler	8	static
+stm32l0xx_hal_rcc_ex.c:852:13:HAL_RCCEx_LSECSS_Callback	8	static
+stm32l0xx_hal_rcc_ex.c:866:6:HAL_RCCEx_CRSConfig	16	static
+stm32l0xx_hal_rcc_ex.c:928:6:HAL_RCCEx_CRSSoftwareSynchronizationGenerate	8	static
+stm32l0xx_hal_rcc_ex.c:939:6:HAL_RCCEx_CRSGetSynchronizationInfo	16	static
+stm32l0xx_hal_rcc_ex.c:974:10:HAL_RCCEx_CRSWaitSynchronization	24	static
+stm32l0xx_hal_rcc_ex.c:1057:6:HAL_RCCEx_EnableHSI48_VREFINT	8	static
+stm32l0xx_hal_rcc_ex.c:1069:6:HAL_RCCEx_DisableHSI48_VREFINT	8	static

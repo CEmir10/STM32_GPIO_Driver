@@ -1,0 +1,19 @@
+10:28:02 **** Rebuild of configuration Debug for project vjezba ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -Wall -specs=nano.specs -o src\main.o 
+arm-atollic-eabi-gcc -c ..\Drivers\Src\stm32_gpiox.c -mthumb -mcpu=cortex-m0plus -std=gnu11 -DSTM32L073xx -I../src -IC:\Users\emirc\Atollic\TrueSTUDIO\STM32_workspace_9.3\vjezba\Drivers\Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/BSP/STM32L073Z_EVAL -I../Drivers/BSP/Components/Common -I../Drivers/BSP/Components/mfxstm32l152 -I../Drivers/CMSIS/HAL_Driver/Legacy -O0 -ffunction-sections -fdata-sections -g -Wall -specs=nano.specs -o Drivers\Src\stm32_gpiox.o 
+arm-atollic-eabi-gcc -o vjezba.elf Drivers\Src\stm32_gpiox.o src\main.o -mthumb -mcpu=cortex-m0plus -T../stm32_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=vjezba.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: warning: cannot find entry symbol Reset_Handler; defaulting to 08000000
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list vjezba.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+     96	      8	    284	    388	    184	vjezba.elf
+Print size information done
+Generate listing file
+Output sent to: vjezba.list
+Generate listing file done
+Generate build reports done
+
+10:28:03 Build Finished (took 954ms)
+

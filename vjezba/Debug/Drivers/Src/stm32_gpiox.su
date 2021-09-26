@@ -1,0 +1,10 @@
+stm32_gpiox.c:12:6:GPIO_PheripheralClockControl	16	static
+stm32_gpiox.c:36:6:GPIO_Init	24	static
+stm32_gpiox.c:59:6:GPIO_DeInit	16	static
+stm32_gpiox.c:64:9:GPIO_ReadFromInputPin	24	static
+stm32_gpiox.c:70:10:GPIO_ReadFromInputPort	24	static
+stm32_gpiox.c:75:6:GPIO_WriteToOutputPin	16	static
+stm32_gpiox.c:83:6:GPIO_WriteToOutputPort	16	static
+stm32_gpiox.c:86:6:GPIO_ToggleOutputPin	16	static
+stm32_gpiox.c:90:6:GPIO_IRQCofig	24	static
+stm32_gpiox.c:93:6:GPIO_IRQHandling	16	static
